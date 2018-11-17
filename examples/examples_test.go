@@ -81,17 +81,6 @@ func TestExamples(t *testing.T) {
 			Dir:          path.Join(cwd, "dynamic-provider/multiple-turns-2"),
 			Dependencies: []string{"@pulumi/pulumi"},
 		},
-		{
-			Dir:          path.Join(cwd, "compat/v0.10.0/minimal"),
-			Dependencies: []string{"@pulumi/pulumi"},
-			Config: map[string]string{
-				"name": "Pulumi",
-			},
-			Secrets: map[string]string{
-				"secret": "this is my secret message",
-			},
-			RunBuild: true,
-		},
 	}
 
 	for _, example := range examples {
